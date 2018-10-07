@@ -8,14 +8,13 @@ using GameSparks.Core;
 
 namespace GameSparksTutorials
 {
-    public enum ERegistrationResponse
+    public enum ESignUpResponse
     {
-        EmailIsTaken, UsernameIsTaken, Success, Error
+        EMAILISTAKEN, USERNAMEISTAKEN, SUCCESS, ERROR
     }
 
     public class GS_Authentication : GS_Base
     {
-
         /// <summary>
         /// Log the user in as a guest.
         /// </summary>

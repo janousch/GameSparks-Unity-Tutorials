@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameSparksTutorials {
-
-    public class MainMenu : MonoBehaviour {
-
+namespace GameSparksTutorials
+{
+    public class MainMenu : MonoBehaviour
+    {
         [SerializeField]
         private Text displayName;
 

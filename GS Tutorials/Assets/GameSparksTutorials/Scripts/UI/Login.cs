@@ -8,6 +8,7 @@ namespace GameSparksTutorials
         public void GuestLogin()
         {
             EventManager.StartListening<string>("OnLoginResponse", OnLoginResponse);
+
             GS_Authentication.DeviceAuthentication("OnLoginResponse");
         }
 
@@ -20,7 +21,7 @@ namespace GameSparksTutorials
                 UIController.SetActivePanel(UI_Element.MainMenu);
             } else
             {
-                Debug.Log("Error OnLoginResponse!");
+                Debug.Log("Error OnLoginResponse");
             }
 
             EventManager.StopListening<string>("OnLoginResponse", OnLoginResponse);
