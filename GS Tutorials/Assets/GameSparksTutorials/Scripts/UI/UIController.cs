@@ -7,7 +7,8 @@ namespace GameSparksTutorials
     public enum UI_Element
     {
         Login,
-        MainMenu
+        MainMenu,
+        SignUp
     }
 
     public class UIController : AMonoBehaviourSingleton<UIController>
@@ -88,6 +89,7 @@ namespace GameSparksTutorials
             panels.Clear();
             panels.Add(UI_Element.Login, Instance.transform.Find("Login").gameObject);
             panels.Add(UI_Element.MainMenu, Instance.transform.Find("MainMenu").gameObject);
+            panels.Add(UI_Element.SignUp, Instance.transform.Find("SignUp").gameObject);
         }
     }
 }
