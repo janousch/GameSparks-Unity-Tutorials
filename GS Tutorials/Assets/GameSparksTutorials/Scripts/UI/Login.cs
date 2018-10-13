@@ -53,12 +53,10 @@ namespace GameSparksTutorials
                 OnLoginResponse(displayName);
 
                 PopUpMessage.ActivatePopUp(delegate { UIController.SetActivePanel(UI_Element.SignUp); }, "Sign Up to build & make friends!");
-            }
-            else
+            } else
             {
-                Debug.Log("Error OnLoginResponse");
+                Debug.Log("Error OnGuestLoginResponse");
             }
-
 
             EventManager.StopListening<string>("OnGuestLoginResponse", OnGuestLoginResponse);
         }

@@ -31,17 +31,17 @@ namespace GameSparksTutorials
 
             loginRequest.SetUserName(username);
             loginRequest.SetPassword(password);
+
             loginRequest.Send(response =>
             {
                 if (!response.HasErrors)
                 {
-                    Debug.Log("Player authenticated!\nName: " + response.DisplayName);
+                    Debug.Log("Player authenticated! \n Name: " + response.DisplayName);
 
                     EventManager.TriggerEvent(eventName, response.DisplayName);
 
                     IsUserLoggedIn = true;
-                }
-                else
+                } else
                 {
                     Debug.Log("Error authenticating player... \n" + response.Errors.JSON.ToString());
 
@@ -103,11 +103,10 @@ namespace GameSparksTutorials
                 {
                     if (!response.HasErrors)
                     {
-                        Debug.Log("Player registration successful!\nName: " + response.DisplayName);
+                        Debug.Log("Player registration successful!\n Name: " + response.DisplayName);
 
                         EventManager.TriggerEvent(eventName, response.DisplayName);
-                    }
-                    else
+                    } else
                     {
                         Debug.Log("Error registrating player... \n" + response.Errors.JSON.ToString());
 
